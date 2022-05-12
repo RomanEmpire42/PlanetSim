@@ -2,6 +2,7 @@
 ArrayList<Planet> system = new Arraylist<Planet>();
 double G = 6.674;  //*(Math.pow(10, -11));
 int tick = 0;
+double hello = 5.5
 color backcolor = 40;
 
 

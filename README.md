@@ -1,6 +1,4 @@
 # Planet Simulation
-By Empire42
-=========================
 Controls:
  * Space                   --> Play / Pause (Starts Paused)
  * Shift + RMB             --> Add a new body (of mass 5), add 5 mass to an existing body

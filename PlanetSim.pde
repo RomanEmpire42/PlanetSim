@@ -64,7 +64,7 @@ public void draw()
             break;
           }
           if (system.get(i).getGrav()) {
-            float gforce = (float)(G*system.get(i).getMass()*system.get(j).getMass()/distance);
+            float gforce = (float)(g*system.get(i).getMass()*system.get(j).getMass()/distance);
             PVector force = direction.copy().normalize().mult(gforce).mult(50);
             system.get(i).accelerate(force.div(system.get(i).getMass()));
           }

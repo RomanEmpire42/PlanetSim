@@ -1,6 +1,6 @@
 
 ArrayList<Planet> system;
-double G = 6.674;  //*(Math.pow(10, -11));
+float G = 6.674;  //*(Math.pow(10, -11));
 int tick = 0;
 color backcolor = 40;
 

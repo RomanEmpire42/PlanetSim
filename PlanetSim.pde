@@ -1,6 +1,6 @@
 
 ArrayList<Planet> system;
-double g = 6.674;  //*(Math.pow(10, -11));
+double G = 6.674;  //*(Math.pow(10, -11));
 int tick = 0;
 color backcolor = 40;
 
@@ -23,7 +23,8 @@ color backcolor = 40;
 
 public void setup()
 {
-  size((int)(0.95*window.innerWidth), (int)(0.95*window.innerHeight));
+  //size((int)(0.95*window.innerWidth), (int)(0.95*window.innerHeight));
+  size(1000, 1000);
   frameRate(60);
   backcolor = 20;
   background(backcolor);
@@ -64,7 +65,7 @@ public void draw()
             break;
           }
           if (system.get(i).getGrav()) {
-            float gforce = (float)(g*system.get(i).getMass()*system.get(j).getMass()/distance);
+            float gforce = (float)(G*system.get(i).getMass()*system.get(j).getMass()/distance);
             PVector force = direction.copy().normalize().mult(gforce).mult(50);
             system.get(i).accelerate(force.div(system.get(i).getMass()));
           }
@@ -91,7 +92,7 @@ boolean space = false;
 boolean shift = false;
 boolean fPress = false;
 boolean ctrl = false;
-boolean delete = false;
+boolean del = false;
 boolean tab = false;
 boolean wPress = false;
 boolean sPress = false;
@@ -127,7 +128,7 @@ void keyPressed()
   }
   if (keyCode == 8)
   {
-    delete = true;
+    del = true;
   }
   if (key == 'w')
   {
@@ -158,7 +159,7 @@ void keyReleased()
   }
   if (keyCode == 8)
   {
-    delete = false;
+    del = false;
   }
   if (key == 'w')
   {
@@ -212,7 +213,7 @@ void mouseClicked() {
         if (sPress && system.get(i).radius() > 9) {
           system.get(i).setRad(system.get(i).radius()-3);
         }
-        if (delete || system.get(i).getMass() <= 0) {
+        if (del || system.get(i).getMass() <= 0) {
           system.remove(i);
           break;
         }
@@ -249,7 +250,6 @@ void mouseDragged() {
     }
   }
 }
-
 
 
 // PLANET

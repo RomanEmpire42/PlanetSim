@@ -13,11 +13,14 @@ body {
 }
 
 header {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 90%;
 	
 }
 
 footer {
-	font-style: italic;
+    font-style: italic;
+	font-weight: normal;
 	font-size: 90%;
 }
-

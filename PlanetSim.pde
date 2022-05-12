@@ -333,14 +333,14 @@ class Planet {
       strokeWeight(5);
     }
     //radius = (float)Math.sqrt(mass*125/Math.PI);
-    circle((float)pos.x, (float)pos.y, 2*radius);
+    ellipse((float)pos.x, (float)pos.y, 2*radius, 2*radius);
     for (int i = 0; i < dots.size(); i++) {
-      circle(dots.get(i).x, dots.get(i).y, 10);
+      ellipse(dots.get(i).x, dots.get(i).y, 10, 10);
     }
     PVector velpos = pos.copy().add(vel.copy().mult(60));
     strokeWeight(5);
     line(pos.x, pos.y, velpos.x, velpos.y);
-    circle((float)velpos.x, (float)velpos.y, 10);
+    ellipse((float)velpos.x, (float)velpos.y, 10, 10);
   }
 }
 

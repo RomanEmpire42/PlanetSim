@@ -23,8 +23,8 @@ color backcolor = 40;
 
 public void setup()
 {
-  //size((int)(0.95*window.innerWidth), (int)(0.95*window.innerHeight));
-  size(1000, 1000);
+  size((int)(0.95*window.innerWidth), (int)(0.95*window.innerHeight));
+  //size(1000, 1000);
   frameRate(60);
   backcolor = 20;
   background(backcolor);
@@ -335,7 +335,7 @@ class Planet {
     //radius = (float)Math.sqrt(mass*125/Math.PI);
     ellipse((float)pos.x, (float)pos.y, 2*radius, 2*radius);
     for (int i = 0; i < dots.size(); i++) {
-      println(dots.toString())
+      println(dots.size())
       ellipse(dots.get(i).x, dots.get(i).y, 10, 10);
     }
     PVector velpos = pos.copy().add(vel.copy().mult(60));

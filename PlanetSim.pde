@@ -335,8 +335,7 @@ class Planet {
     //radius = (float)Math.sqrt(mass*125/Math.PI);
     ellipse((float)pos.x, (float)pos.y, 2*radius, 2*radius);
     for (int i = 0; i < dots.size(); i++) {
-      //not working for some reason -- arraylist of PVectors
-      //ellipse(dots.get(i).x, dots.get(i).y, 10, 10);
+      ellipse(dots.get(i).x, dots.get(i).y, 10, 10);
     }
     PVector velpos = pos.copy().add(vel.copy().mult(60));
     strokeWeight(5);
